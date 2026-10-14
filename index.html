@@ -1,245 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Francheska — Web Developer · UI/UX Designer</title>
-<meta name="description" content="Portfolio of Francheska — BSIT student, Web Developer and UI/UX Designer.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Francheska — Web Developer · UI/UX Designer</title>
+  <meta name="description" content="Portfolio of Francheska — BSIT student, Web Developer and UI/UX Designer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- LOADING SCREEN -->
-<div class="loader" id="loader" aria-hidden="true">
-  <div class="loader-inner">
-    <div class="loader-mark">FC</div>
-    <div class="loader-bar"><span></span></div>
-    <p class="loader-text">Welcome to my portfolio<span class="dots"><span>.</span><span>.</span><span>.</span></span></p>
-  </div>
-</div>
-
-<!-- custom cursor -->
-<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
-
-<!-- NAVIGATION -->
-<header class="nav-wrap">
-  <nav class="nav glass" id="mainNav">
-    <div class="nav-side nav-side-left">
-      <a href="#home" class="nav-logo">FC<span>.</span></a>
-    </div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home" class="nav-link active" data-nav>Home</a></li>
-      <li><a href="#about" class="nav-link" data-nav>About Me</a></li>
-      <li><a href="#skills" class="nav-link" data-nav>Skills</a></li>
-      <li><a href="#works" class="nav-link" data-nav>Works</a></li>
-      <li><a href="#seminars" class="nav-link" data-nav>Seminars</a></li>
-      <li><a href="#resume" class="nav-link" data-nav>Resume</a></li>
-      <li><a href="#contact" class="nav-link" data-nav>Contact</a></li>
-    </ul>
-    <div class="nav-side nav-side-right">
-      <a href="#contact" class="btn btn-sm btn-primary nav-cta">Let's talk</a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#home" data-nav>Home</a>
-    <a href="#about" data-nav>About Me</a>
-    <a href="#skills" data-nav>Skills</a>
-    <a href="#works" data-nav>Works</a>
-    <a href="#seminars" data-nav>Seminars</a>
-    <a href="#resume" data-nav>Resume</a>
-    <a href="#contact" data-nav>Contact</a>
-  </div>
-</header>
-
-<main>
-
-<!-- HERO -->
-<section id="home" class="hero">
-  <div class="hero-bg" aria-hidden="true">
-    <svg class="hero-grid" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
-      <defs>
-        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="var(--accent)" stroke-width="0.5" opacity="0.25"/>
-        </pattern>
-      </defs>
-      <rect width="800" height="800" fill="url(#grid)"/>
-    </svg>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-  </div>
-
-  <div class="hero-inner container">
-    <div class="hero-copy">
-      <p class="eyebrow reveal" data-reveal>
-        <span class="status-dot"></span> Available for OJT / Internship
+  <!-- LOADING SCREEN -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-mark">FC</div>
+      <div class="loader-bar"><span></span></div>
+      <p class="loader-text">Welcome to my portfolio<span class="dots"><span>.</span><span>.</span><span>.</span></span>
       </p>
-      <h1 class="hero-title reveal" data-reveal>Hi, I'm<br><span class="accent-text">Francheska.</span></h1>
-
-      <div class="role-terminal reveal" data-reveal>
-        <span class="role-prompt">&gt;</span>
-        <span class="role-text" id="roleText"></span><span class="role-cursor">|</span>
-      </div>
-
-      <p class="hero-desc reveal" data-reveal>
-        I'm a BSIT student who enjoys building websites and designing user-friendly digital
-        experiences. I create functional, responsive, and user-centered digital experiences
-        through web development and UI/UX design.
-      </p>
-
-      <div class="hero-cta reveal" data-reveal>
-        <a href="#works" class="btn btn-primary">View My Works</a>
-        <a href="#contact" class="btn btn-ghost">Contact Me</a>
-      </div>
-    </div>
-
-    <div class="hero-visual reveal" data-reveal>
-      <div class="avatar-frame glass">
-        <img src="ako.png" alt="Francheska" class="avatar-photo">
-        <div class="avatar-ring"></div>
-      </div>
-
-      <div class="float-card fc-1 glass">
-        <span class="fc-icon">◆</span>
-        <div>
-          <p class="fc-title">UI/UX Design</p>
-          <p class="fc-sub">Figma · Prototyping</p>
-        </div>
-      </div>
-      <div class="float-card fc-2 glass">
-        <span class="fc-icon">◆</span>
-        <div>
-          <p class="fc-title">Web Development</p>
-          <p class="fc-sub">PHP · MySQL · JS</p>
-        </div>
-      </div>
-      <div class="float-card fc-3 glass">
-        <span class="fc-icon">◆</span>
-        <div>
-          <p class="fc-title">Front-End</p>
-          <p class="fc-sub">Responsive · Accessible</p>
-        </div>
-      </div>
-      <div class="float-badge glass">
-        <span>BSIT</span>
-        <strong>Student</strong>
-      </div>
     </div>
   </div>
 
-  <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
-    <span></span>
-  </a>
-</section>
+  <!-- custom cursor -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
 
-<!-- ABOUT -->
-<section id="about" class="section about">
-  <div class="container about-grid">
-    <div class="about-left">
-      <p class="eyebrow reveal" data-reveal>About Me</p>
-      <h2 class="section-title reveal" data-reveal>Designing experiences.<br>Building solutions.</h2>
-      <p class="about-text reveal" data-reveal>
-        I'm a BSIT student with a strong interest in web development and UI/UX design. I enjoy
-        turning ideas into functional, user-friendly websites — from the first wireframe to a
-        working front-end and back-end.
-      </p>
-      <p class="about-text reveal" data-reveal>
-        I'm comfortable working with front-end technologies and basic back-end development using
-        PHP and MySQL, and I like the process of designing an interface first, then building it
-        so it actually works the way it was meant to.
-      </p>
-      <a href="#contact" class="btn btn-ghost reveal" data-reveal>Get in touch →</a>
+  <!-- NAVIGATION -->
+  <header class="nav-wrap">
+    <nav class="nav glass" id="mainNav">
+      <div class="nav-side nav-side-left">
+        <a href="#home" class="nav-logo">FC<span>.</span></a>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-nav>Home</a></li>
+        <li><a href="#about" class="nav-link" data-nav>About Me</a></li>
+        <li><a href="#skills" class="nav-link" data-nav>Skills</a></li>
+        <li><a href="#works" class="nav-link" data-nav>Works</a></li>
+        <li><a href="#seminars" class="nav-link" data-nav>Seminars</a></li>
+        <li><a href="#resume" class="nav-link" data-nav>Resume</a></li>
+        <li><a href="#contact" class="nav-link" data-nav>Contact</a></li>
+      </ul>
+      <div class="nav-side nav-side-right">
+        <a href="#contact" class="btn btn-sm btn-primary nav-cta">Let's talk</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" data-nav>Home</a>
+      <a href="#about" data-nav>About Me</a>
+      <a href="#skills" data-nav>Skills</a>
+      <a href="#works" data-nav>Works</a>
+      <a href="#seminars" data-nav>Seminars</a>
+      <a href="#resume" data-nav>Resume</a>
+      <a href="#contact" data-nav>Contact</a>
     </div>
+  </header>
 
-    <div class="about-right">
-      <div class="info-card glass reveal" data-reveal>
-        <span class="info-label">Education</span>
-        <p class="info-value">BS Information Technology</p>
-      </div>
-      <div class="info-card glass reveal" data-reveal>
-        <span class="info-label">Focus</span>
-        <p class="info-value">Web Development &amp; UI/UX</p>
-      </div>
-      <div class="info-card glass reveal" data-reveal>
-        <span class="info-label">Development</span>
-        <p class="info-value">Front-End + Basic Back-End</p>
-      </div>
-      <div class="info-card glass reveal" data-reveal>
-        <span class="info-label">Goal</span>
-        <p class="info-value">To grow my skills through real-world development experience</p>
-      </div>
-    </div>
-  </div>
-</section>
+  <main>
 
-<!-- SKILLS -->
-<section id="skills" class="section skills">
-  <div class="container">
-    <p class="eyebrow reveal center" data-reveal>Skills</p>
-    <h2 class="section-title center reveal" data-reveal>What I bring to a team</h2>
-    <p class="section-sub center reveal" data-reveal>From interface to implementation — design and development working together.</p>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <svg class="hero-grid" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="var(--accent)" stroke-width="0.5" opacity="0.25" />
+            </pattern>
+          </defs>
+          <rect width="800" height="800" fill="url(#grid)" />
+        </svg>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+      </div>
 
-    <div class="skills-grid skills-grid-2">
-      <div class="skill-category glass reveal" data-reveal>
-        <div class="skill-cat-head">
-          <span class="skill-cat-icon">🖥</span>
-          <h3>Web Development</h3>
+      <div class="hero-inner container">
+        <div class="hero-copy">
+          <p class="eyebrow reveal" data-reveal>
+            <span class="status-dot"></span> Available for OJT / Internship
+          </p>
+          <h1 class="hero-title reveal" data-reveal>Hi, I'm<br><span class="accent-text">Francheska.</span></h1>
+
+          <div class="role-terminal reveal" data-reveal>
+            <span class="role-prompt">&gt;</span>
+            <span class="role-text" id="roleText"></span><span class="role-cursor">|</span>
+          </div>
+
+          <p class="hero-desc reveal" data-reveal>
+            I'm a BSIT student who enjoys building websites and designing user-friendly digital
+            experiences. I create functional, responsive, and user-centered digital experiences
+            through web development and UI/UX design.
+          </p>
+
+          <div class="hero-cta reveal" data-reveal>
+            <a href="#works" class="btn btn-primary">View My Works</a>
+            <a href="#contact" class="btn btn-ghost">Contact Me</a>
+          </div>
         </div>
-        <div class="skill-tags">
-          <span class="skill-tag">HTML</span>
-          <span class="skill-tag">CSS</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">PHP</span>
-          <span class="skill-tag">MySQL</span>
-          <span class="skill-tag">Database Management</span>
-          <span class="skill-tag">Responsive Web Design</span>
-          <span class="skill-tag">Front-End Development</span>
-          <span class="skill-tag">Basic Back-End Development</span>
-          <span class="skill-tag" tabindex="0">XAMPP
-            <span class="skill-tooltip">Local development environment used for PHP and MySQL-based projects</span>
-          </span>
+
+        <div class="hero-visual reveal" data-reveal>
+          <div class="avatar-frame glass">
+            <img src="ako.png" alt="Francheska" class="avatar-photo">
+            <div class="avatar-ring"></div>
+          </div>
+
+          <div class="float-card fc-1 glass">
+            <span class="fc-icon">◆</span>
+            <div>
+              <p class="fc-title">UI/UX Design</p>
+              <p class="fc-sub">Figma · Prototyping</p>
+            </div>
+          </div>
+          <div class="float-card fc-2 glass">
+            <span class="fc-icon">◆</span>
+            <div>
+              <p class="fc-title">Web Development</p>
+              <p class="fc-sub">PHP · MySQL · JS</p>
+            </div>
+          </div>
+          <div class="float-card fc-3 glass">
+            <span class="fc-icon">◆</span>
+            <div>
+              <p class="fc-title">Front-End</p>
+              <p class="fc-sub">Responsive · Accessible</p>
+            </div>
+          </div>
+          <div class="float-badge glass">
+            <span>BSIT</span>
+            <strong>Student</strong>
+          </div>
         </div>
       </div>
 
-      <div class="skill-category glass reveal" data-reveal>
-        <div class="skill-cat-head">
-          <span class="skill-cat-icon">✎</span>
-          <h3>UI/UX Design</h3>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container about-grid">
+        <div class="about-left">
+          <p class="eyebrow reveal" data-reveal>About Me</p>
+          <h2 class="section-title reveal" data-reveal>Designing experiences.<br>Building solutions.</h2>
+          <p class="about-text reveal" data-reveal>
+            I'm a BSIT student with a strong interest in web development and UI/UX design. I enjoy
+            turning ideas into functional, user-friendly websites — from the first wireframe to a
+            working front-end and back-end.
+          </p>
+          <p class="about-text reveal" data-reveal>
+            I'm comfortable working with front-end technologies and basic back-end development using
+            PHP and MySQL, and I like the process of designing an interface first, then building it
+            so it actually works the way it was meant to.
+          </p>
+          <a href="#contact" class="btn btn-ghost reveal" data-reveal>Get in touch →</a>
         </div>
-        <div class="skill-tags">
-          <span class="skill-tag">Figma</span>
-          <span class="skill-tag">Wireframing</span>
-          <span class="skill-tag">Prototyping</span>
-          <span class="skill-tag">User Interface Design</span>
-          <span class="skill-tag">User Experience Design</span>
-          <span class="skill-tag">Responsive Design</span>
-          <span class="skill-tag">Design Systems</span>
-          <span class="skill-tag">User Flow</span>
+
+        <div class="about-right">
+          <div class="info-card glass reveal" data-reveal>
+            <span class="info-label">Education</span>
+            <p class="info-value">BS Information Technology</p>
+          </div>
+          <div class="info-card glass reveal" data-reveal>
+            <span class="info-label">Focus</span>
+            <p class="info-value">Web Development &amp; UI/UX</p>
+          </div>
+          <div class="info-card glass reveal" data-reveal>
+            <span class="info-label">Development</span>
+            <p class="info-value">Front-End + Basic Back-End</p>
+          </div>
+          <div class="info-card glass reveal" data-reveal>
+            <span class="info-label">Goal</span>
+            <p class="info-value">To grow my skills through real-world development experience</p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- WORKS -->
-<section id="works" class="section works">
-  <div class="container">
-    <p class="eyebrow reveal center" data-reveal>Works</p>
-    <h2 class="section-title center reveal" data-reveal>Selected Projects</h2>
-    <p class="section-sub center reveal" data-reveal>A mix of front-end, full-stack, and interface work — swap in your own screenshots and links below.</p>
+    <!-- SKILLS -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <p class="eyebrow reveal center" data-reveal>Skills</p>
+        <h2 class="section-title center reveal" data-reveal>What I bring to a team</h2>
+        <p class="section-sub center reveal" data-reveal>From interface to implementation — design and development
+          working together.</p>
 
-    <div class="filter-bar reveal" data-reveal role="tablist" aria-label="Filter projects">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="web">Web Development</button>
-      <button class="filter-btn" data-filter="uiux">UI/UX</button>
-    </div>
+        <div class="skills-grid skills-grid-2">
+          <div class="skill-category glass reveal" data-reveal>
+            <div class="skill-cat-head">
+              <span class="skill-cat-icon">🖥</span>
+              <h3>Web Development</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">Database Management</span>
+              <span class="skill-tag">Responsive Web Design</span>
+              <span class="skill-tag">Front-End Development</span>
+              <span class="skill-tag">Basic Back-End Development</span>
+              <span class="skill-tag" tabindex="0">XAMPP
+                <span class="skill-tooltip">Local development environment used for PHP and MySQL-based projects</span>
+              </span>
+            </div>
+          </div>
 
-    <!--
+          <div class="skill-category glass reveal" data-reveal>
+            <div class="skill-cat-head">
+              <span class="skill-cat-icon">✎</span>
+              <h3>UI/UX Design</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Wireframing</span>
+              <span class="skill-tag">Prototyping</span>
+              <span class="skill-tag">User Interface Design</span>
+              <span class="skill-tag">User Experience Design</span>
+              <span class="skill-tag">Responsive Design</span>
+              <span class="skill-tag">Design Systems</span>
+              <span class="skill-tag">User Flow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKS -->
+    <section id="works" class="section works">
+      <div class="container">
+        <p class="eyebrow reveal center" data-reveal>Works</p>
+        <h2 class="section-title center reveal" data-reveal>Selected Projects</h2>
+        <p class="section-sub center reveal" data-reveal>A mix of front-end, full-stack, and interface work — swap in
+          your own screenshots and links below.</p>
+
+        <div class="filter-bar reveal" data-reveal role="tablist" aria-label="Filter projects">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web Development</button>
+          <button class="filter-btn" data-filter="uiux">UI/UX</button>
+        </div>
+
+        <!--
       PAANO MAGLAGAY NG SCREENSHOT:
       I-edit lang ang src="" ng bawat <img class="project-screenshot"> sa
       ibaba (hal. src="Citilife1.png"). Ilagay ang image file sa SAME
@@ -249,286 +254,397 @@
       I-edit lang ang href="" ng <a class="project-link"> sa bawat project.
     -->
 
-    <div class="works-grid" id="worksGrid">
+        <div class="works-grid" id="worksGrid">
 
-      <!-- Project 1 -->
-      <article class="project-card glass reveal" data-reveal data-cat="web">
-        <div class="project-media media-browser">
-          <div class="browser-chrome">
-            <span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span>
-            <span class="chrome-url">citilife.systems</span>
-          </div>
-          <div class="browser-screen">
-            <img src="Citilife1.png" alt="Screenshot of CitiLife Connect system" class="project-screenshot">
-            <div class="screenshot-placeholder">
-              <span class="placeholder-icon">🖥</span>
-              <span class="placeholder-text">Add screenshot</span>
+          <!-- Project 1: Citilife -->
+          <article class="project-card glass reveal" data-reveal data-cat="web">
+            <div class="project-media media-browser">
+              <div class="browser-chrome">
+                <span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span>
+                <span class="chrome-url">citilife.systems</span>
+              </div>
+              <div class="browser-screen">
+                <img src="Citilife1.png" alt="CitiLife Connect - Radiology Information System"
+                  class="project-screenshot">
+                <div class="screenshot-placeholder">
+                  <span class="placeholder-icon">🖥</span>
+                  <span class="placeholder-text">Add screenshot</span>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="project-body">
-          <span class="project-cat-badge">Website</span>
-          <h3 class="project-title">CitiLife Connect: A Web-Based Radiology Information System with Centralized Imaging Repository and Real-Time Patient Tracking</h3>
-          <p class="project-desc">A web-based radiology information management system featuring a PHP/MySQL back end and a responsive front end to streamline diagnostic workflow across multi-branch healthcare facilities.</p>
-          <div class="project-tools">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>XAMPP</span>
-          </div>
-          <a href="https://citilife.systems/citilife-system/" class="project-link" target="_blank" rel="noopener">View Project ↗</a>
-        </div>
-      </article>
-
-      <!-- Project 2 -->
-      <article class="project-card glass reveal" data-reveal data-cat="uiux">
-        <div class="project-media media-browser">
-          <div class="browser-chrome">
-            <span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span>
-            <span class="chrome-url">figma.com/locarate</span>
-          </div>
-          <div class="browser-screen">
-            <img src="locarate.png" alt="Screenshot of Locarate app" class="project-screenshot">
-            <div class="screenshot-placeholder">
-              <span class="placeholder-icon">🖥</span>
-              <span class="placeholder-text">Add screenshot</span>
+            <div class="project-body">
+              <span class="project-cat-badge">Web System</span>
+              <h3 class="project-title">CitiLife Connect</h3>
+              <p class="project-desc">A web-based radiology information system with centralized imaging repository and
+                real-time patient tracking. Features a PHP/MySQL back end and responsive front end designed to
+                streamline diagnostic workflows across healthcare facilities.</p>
+              <div class="project-tools">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>XAMPP</span>
+              </div>
+              <a href="https://citilife.systems/citilife-system/" class="project-link" target="_blank"
+                rel="noopener">View Project ↗</a>
             </div>
-          </div>
-        </div>
-        <div class="project-body">
-          <span class="project-cat-badge">UI/UX Design</span>
-          <h3 class="project-title">Locarate</h3>
-          <p class="project-desc">End-to-end UI/UX design for a ride-hailing mobile app user research, wireframes, and an interactive Figma prototype for calculating distance-based transport fares.</p>
-          <div class="project-tools">
-            <span>Figma</span><span>Wireframing</span><span>Prototyping</span>
-          </div>
-          <a href="https://www.figma.com/proto/MlQEqGkQkrOwhiN6260G0i/LocaRate---IT-HCI01?node-id=0-1&t=6KdtgAC3rg72oBgk-1" class="project-link" target="_blank" rel="noopener">View Project ↗</a>
-        </div>
-      </article>
+          </article>
 
-      <!-- Project 3 -->
-      <article class="project-card glass reveal" data-reveal data-cat="uiux">
-        <div class="project-media media-browser">
-          <div class="browser-chrome">
-            <span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span>
-            <span class="chrome-url">figma.com/harvest-hotel</span>
-          </div>
-          <div class="browser-screen">
-            <img src="harvest.png" alt="Screenshot of Student Record Management System" class="project-screenshot">
-            <div class="screenshot-placeholder">
-              <span class="placeholder-icon">🖥</span>
-              <span class="placeholder-text">Add screenshot</span>
+          <!-- Project 2: Campus Care -->
+          <article class="project-card glass reveal" data-reveal data-cat="web">
+            <div class="project-media media-browser">
+              <div class="browser-chrome">
+                <span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span>
+                <span class="chrome-url">campus-care-five-phi.vercel.app</span>
+              </div>
+              <div class="browser-screen">
+                <img src="campus_care.png" alt="Campus Care - Student Health & Clinic Portal"
+                  class="project-screenshot">
+                <div class="screenshot-placeholder">
+                  <span class="placeholder-icon">🖥</span>
+                  <span class="placeholder-text">Add screenshot</span>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="project-body">
-          <span class="project-cat-badge">UI/UX Design</span>
-          <h3 class="project-title">Harvest Hotel</h3>
-          <p class="project-desc">UI/UX redesign of the Harvest Hotel website end-to-end user research, modernized wireframes, and a responsive high-fidelity Figma prototype focused on improving site navigation and booking usability.</p>
-          <div class="project-tools">
-            <span>Figma</span><span>Wireframing</span><span>Prototyping</span>
-          </div>
-          <a href="https://www.figma.com/proto/yVo3p6qv4D733K3MaezRvv/Harvest-Hotel?node-id=0-1&t=sh1QngZ0fbzWlA07-1" class="project-link" target="_blank" rel="noopener">View Project ↗</a>
-        </div>
-      </article>
-
-      <!-- Project 4 -->
-      <article class="project-card glass reveal" data-reveal data-cat="uiux">
-        <div class="project-media media-browser">
-          <div class="browser-chrome">
-            <span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span>
-            <span class="chrome-url">figma.com/lumiere</span>
-          </div>
-          <div class="browser-screen">
-            <img src="lumiere.png" alt="Screenshot of Small Business Landing Page" class="project-screenshot">
-            <div class="screenshot-placeholder">
-              <span class="placeholder-icon">🖥</span>
-              <span class="placeholder-text">Add screenshot</span>
+            <div class="project-body">
+              <span class="project-cat-badge">Web Application</span>
+              <h3 class="project-title">Campus Care</h3>
+              <p class="project-desc">A student healthcare and campus clinic management web portal featuring secure
+                role-based authentication, medical record tracking, appointment management, and modern responsive user
+                experience.</p>
+              <div class="project-tools">
+                <span>Next.js</span><span>React</span><span>Tailwind
+                  CSS</span><span>JavaScript</span><span>Vercel</span>
+              </div>
+              <a href="https://campus-care-five-phi.vercel.app/login" class="project-link" target="_blank"
+                rel="noopener">View Project ↗</a>
             </div>
+          </article>
+
+          <!-- Project 3: Eready -->
+          <article class="project-card glass reveal" data-reveal data-cat="web">
+            <div class="project-media media-browser">
+              <div class="browser-chrome">
+                <span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span>
+                <span class="chrome-url">eready-silk.vercel.app</span>
+              </div>
+              <div class="browser-screen">
+                <img src="eready.png" alt="E-READY - Emergency Preparedness Kit" class="project-screenshot">
+                <div class="screenshot-placeholder">
+                  <span class="placeholder-icon">🖥</span>
+                  <span class="placeholder-text">Add screenshot</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-cat-badge">Web Application</span>
+              <h3 class="project-title">E-READY</h3>
+              <p class="project-desc">A digital disaster preparedness and emergency response kit web application. Equips
+                users with interactive emergency supply checklists, vital safety alerts, and crisis readiness resources
+                for disaster resilience.</p>
+              <div class="project-tools">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Vercel</span>
+              </div>
+              <a href="https://eready-silk.vercel.app/login" class="project-link" target="_blank" rel="noopener">View
+                Project ↗</a>
+            </div>
+          </article>
+
+          <!-- Project 4: Harvest Hotel -->
+          <article class="project-card glass reveal" data-reveal data-cat="web uiux">
+            <div class="project-media media-browser">
+              <div class="browser-chrome">
+                <span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span>
+                <span class="chrome-url">harvest-hotel.vercel.app</span>
+              </div>
+              <div class="browser-screen">
+                <img src="harvest.png" alt="Harvest Hotel - Premier Hotel & Events" class="project-screenshot">
+                <div class="screenshot-placeholder">
+                  <span class="placeholder-icon">🖥</span>
+                  <span class="placeholder-text">Add screenshot</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-cat-badge">Web Application</span>
+              <h3 class="project-title">Harvest Hotel</h3>
+              <p class="project-desc">A premier hotel accommodation and event reservation web application for Harvest
+                Hotel in Cabanatuan. Features luxury suite showcases, dynamic booking inquiry flows, amenities gallery,
+                and clean mobile-first design.</p>
+              <div class="project-tools">
+                <span>Angular</span><span>TypeScript</span><span>HTML</span><span>CSS</span><span>Vercel</span>
+              </div>
+              <a href="https://harvest-hotel.vercel.app/" class="project-link" target="_blank" rel="noopener">View
+                Project ↗</a>
+            </div>
+          </article>
+
+          <!-- Project 5: Our Best Choice -->
+          <article class="project-card glass reveal" data-reveal data-cat="web">
+            <div class="project-media media-browser">
+              <div class="browser-chrome">
+                <span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span>
+                <span class="chrome-url">case-study-itws02.vercel.app</span>
+              </div>
+              <div class="browser-screen">
+                <img src="our_best_choice.png" alt="Our Best Choice - Coffee Selection & Cafe"
+                  class="project-screenshot">
+                <div class="screenshot-placeholder">
+                  <span class="placeholder-icon">🖥</span>
+                  <span class="placeholder-text">Add screenshot</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-cat-badge">Website</span>
+              <h3 class="project-title">Our Best Choice</h3>
+              <p class="project-desc">An aesthetic coffee shop showcase and case study web application highlighting
+                artisan roast selections, interactive menu exploration, customer favorite counter, and smooth
+                swiper-powered carousel browsing.</p>
+              <div class="project-tools">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>SwiperJS</span><span>Vercel</span>
+              </div>
+              <a href="https://case-study-itws02.vercel.app/index.html?fbclid=IwY2xjawU8P69leHRuA2FlbQIxMABwZG9mBWJyaWQRMWQxdVQ3Y2F2M2xmelFvdE9zcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEegGVNjnT978_WnsFVquwSGySsPKArkOlK-UKFrcpbUxTBPY1yb6694oloIH0_aem_2Y-ZPrUxaAvFTDl7jKigwA"
+                class="project-link" target="_blank" rel="noopener">View Project ↗</a>
+            </div>
+          </article>
+
+          <!-- Project 6: Locarate -->
+          <article class="project-card glass reveal" data-reveal data-cat="uiux">
+            <div class="project-media media-browser">
+              <div class="browser-chrome">
+                <span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span>
+                <span class="chrome-url">figma.com/locarate</span>
+              </div>
+              <div class="browser-screen">
+                <img src="locarate.png" alt="Screenshot of Locarate app" class="project-screenshot">
+                <div class="screenshot-placeholder">
+                  <span class="placeholder-icon">🖥</span>
+                  <span class="placeholder-text">Add screenshot</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-cat-badge">UI/UX Design</span>
+              <h3 class="project-title">Locarate</h3>
+              <p class="project-desc">End-to-end UI/UX design for a ride-hailing mobile application. Incorporates user
+                research, wireframing, and an interactive Figma prototype focused on distance-based transport fare
+                estimation and intuitive ride booking.</p>
+              <div class="project-tools">
+                <span>Figma</span><span>Wireframing</span><span>Prototyping</span>
+              </div>
+              <a href="https://www.figma.com/proto/MlQEqGkQkrOwhiN6260G0i/LocaRate---IT-HCI01?node-id=0-1&t=6KdtgAC3rg72oBgk-1"
+                class="project-link" target="_blank" rel="noopener">View Project ↗</a>
+            </div>
+          </article>
+
+          <!-- Project 7: Lumiere -->
+          <article class="project-card glass reveal single-last" data-reveal data-cat="uiux">
+            <div class="project-media media-browser">
+              <div class="browser-chrome">
+                <span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span>
+                <span class="chrome-url">figma.com/lumiere</span>
+              </div>
+              <div class="browser-screen">
+                <img src="lumiere.png" alt="Screenshot of Lumière E-Commerce platform" class="project-screenshot">
+                <div class="screenshot-placeholder">
+                  <span class="placeholder-icon">🖥</span>
+                  <span class="placeholder-text">Add screenshot</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-cat-badge">UI/UX Design</span>
+              <h3 class="project-title">Lumière E-Commerce</h3>
+              <p class="project-desc">End-to-end UI/UX design for Lumière, a premium cosmetics e-commerce platform.
+                Features user research, wireframing, interactive product swatches, shade matching prototypes, and a
+                streamlined checkout flow.</p>
+              <div class="project-tools">
+                <span>Figma</span><span>Wireframing</span><span>Prototyping</span>
+              </div>
+              <a href="https://www.figma.com/proto/zyTPwyp33BnEfHAR8GLIZO/E-commerce?node-id=1-102&t=x3STZ3lyhYG4gqwP-1"
+                class="project-link" target="_blank" rel="noopener">View Project ↗</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SEMINARS & CERTIFICATES -->
+    <section id="seminars" class="section seminars">
+      <div class="container">
+        <p class="eyebrow reveal center" data-reveal>Seminars &amp; Certificates</p>
+        <h2 class="section-title center reveal" data-reveal>Continuous Learning</h2>
+        <p class="section-sub center reveal" data-reveal>Seminars, webinars, and workshops I've attended along the way.
+          Click a card to view the certificate up close.</p>
+
+        <div class="cert-grid" id="certGrid">
+
+          <button class="cert-card glass reveal" data-reveal type="button">
+            <div class="cert-media">
+              <img src="seminar1.png" alt="Certificate: Database 101" class="cert-thumb-img">
+            </div>
+            <div class="cert-body">
+              <h3 class="cert-title">Database 101: Data storage, SQL, and Query Optimization </h3>
+              <p class="cert-sub">Webinar · UpskilTechPh</p>
+              <p class="cert-date">August 2026</p>
+            </div>
+            <span class="cert-view-btn">View Certificate ↗</span>
+          </button>
+
+          <button class="cert-card glass reveal" data-reveal type="button">
+            <div class="cert-media">
+              <img src="seminar2.png" alt="Certificate: AI Tools 101" class="cert-thumb-img">
+            </div>
+            <div class="cert-body">
+              <h3 class="cert-title">AI Tools 101: How to use google gemini like a pro </h3>
+              <p class="cert-sub">Webinar · UpskilTechPh</p>
+              <p class="cert-date">August 2026</p>
+            </div>
+            <span class="cert-view-btn">View Certificate ↗</span>
+          </button>
+
+          <button class="cert-card glass reveal" data-reveal type="button">
+            <div class="cert-media">
+              <img src="seminar3.png" alt="Certificate: Emerging IT Innovations" class="cert-thumb-img">
+            </div>
+            <div class="cert-body">
+              <h3 class="cert-title">Emerging IT Innovations </h3>
+              <p class="cert-sub">Webinar · UpskilTechPh</p>
+              <p class="cert-date">August 2026</p>
+            </div>
+            <span class="cert-view-btn">View Certificate ↗</span>
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificate modal -->
+    <div class="modal-overlay" id="certModal" aria-hidden="true">
+      <div class="modal cert-modal" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
+        <div class="modal-header">
+          <h3 id="certModalTitle">Certificate</h3>
+          <button class="modal-close" id="certModalClose" aria-label="Close certificate viewer">✕</button>
+        </div>
+        <div class="cert-viewer" id="certViewer">
+          <img src="" alt="" id="certModalImg" class="cert-modal-img">
+        </div>
+        <div class="cert-zoom-controls">
+          <button id="zoomOut" aria-label="Zoom out">−</button>
+          <span id="zoomLevel">100%</span>
+          <button id="zoomIn" aria-label="Zoom in">+</button>
+          <button id="zoomReset" class="zoom-reset">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESUME -->
+    <section id="resume" class="section resume">
+      <div class="container">
+        <div class="resume-card glass reveal" data-reveal>
+          <div class="resume-text">
+            <p class="eyebrow">Resume</p>
+            <h2 class="section-title">Web Developer &amp; UI/UX Designer</h2>
+            <p class="section-sub" style="margin:0 0 0;">
+              A summary of my education, projects, and skills across front-end development,
+              basic back-end development, and interface design, ready to share with recruiters
+              and OJT coordinators.
+            </p>
+          </div>
+          <div class="resume-actions">
+            <button class="btn btn-primary" id="viewResumeBtn" type="button">View Resume</button>
+            <a href="resume.pdf" class="btn btn-ghost" id="downloadResumeBtn" download>Download Resume</a>
           </div>
         </div>
-        <div class="project-body">
-          <span class="project-cat-badge">UI/UX Design</span>
-          <h3 class="project-title">Lumiere E Commerce Sample</h3>
-          <p class="project-desc">End-to-end UI/UX design for Lumière, a cosmetics e-commerce platform user research, wireframes, and an interactive Figma prototype featuring product swatches, shade matching, and a seamless checkout process.</p>
-          <div class="project-tools">
-             <span>Figma</span><span>Wireframing</span><span>Prototyping</span>
+      </div>
+    </section>
+
+    <!-- Resume modal -->
+    <div class="modal-overlay" id="resumeModal" aria-hidden="true">
+      <div class="modal resume-modal" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+        <div class="modal-header">
+          <h3 id="resumeModalTitle">Resume</h3>
+          <button class="modal-close" id="resumeModalClose" aria-label="Close resume viewer">✕</button>
+        </div>
+        <div class="resume-viewer">
+          <iframe id="resumeFrame" src="" title="Resume preview"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container contact-grid">
+        <div class="contact-left">
+          <p class="eyebrow reveal" data-reveal>Contact</p>
+          <h2 class="section-title reveal" data-reveal>Let's build something together</h2>
+          <p class="section-sub reveal" data-reveal style="margin:0 0 32px;">
+            Open to OJT placements, internships, and collaborative student projects.
+          </p>
+
+          <ul class="contact-list reveal" data-reveal>
+            <li>
+              <span class="contact-icon">✉</span>
+              <div><span class="contact-label">Email</span><a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=lopezfrancheskaclaire@gmail.com">lopezfrancheskaclaire@gmail.com</a>
+              </div>
+            </li>
+            <li>
+              <span class="contact-icon">in</span>
+              <div><span class="contact-label">LinkedIn</span><a
+                  href="https://www.linkedin.com/in/francheskaclairelopez/" target="_blank"
+                  rel="noopener">https://www.linkedin.com/in/francheskaclairelopez/</a></div>
+            </li>
+            <li>
+              <span class="contact-icon">⌥</span>
+              <div><span class="contact-label">GitHub</span><a href="https://github.com/Freayyyy" target="_blank"
+                  rel="noopener">https://github.com/Freayyyy</a></div>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form glass reveal" data-reveal id="contactForm" novalidate>
+          <div class="form-field">
+            <input type="text" id="cf-name" name="name" placeholder=" " required>
+            <label for="cf-name">Name</label>
           </div>
-          <a href="https://www.figma.com/proto/zyTPwyp33BnEfHAR8GLIZO/E-commerce?node-id=1-102&t=x3STZ3lyhYG4gqwP-1" class="project-link" target="_blank" rel="noopener">View Project ↗</a>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- SEMINARS & CERTIFICATES -->
-<section id="seminars" class="section seminars">
-  <div class="container">
-    <p class="eyebrow reveal center" data-reveal>Seminars &amp; Certificates</p>
-    <h2 class="section-title center reveal" data-reveal>Continuous Learning</h2>
-    <p class="section-sub center reveal" data-reveal>Seminars, webinars, and workshops I've attended along the way. Click a card to view the certificate up close.</p>
-
-    <div class="cert-grid" id="certGrid">
-
-      <button class="cert-card glass reveal" data-reveal type="button">
-        <div class="cert-media">
-          <img src="seminar1.png" alt="Certificate: Database 101" class="cert-thumb-img">
-        </div>
-        <div class="cert-body">
-          <h3 class="cert-title">Database 101: Data storage, SQL, and Query Optimization </h3>
-          <p class="cert-sub">Webinar · UpskilTechPh</p>
-          <p class="cert-date">August 2026</p>
-        </div>
-        <span class="cert-view-btn">View Certificate ↗</span>
-      </button>
-
-      <button class="cert-card glass reveal" data-reveal type="button">
-        <div class="cert-media">
-          <img src="seminar2.png" alt="Certificate: AI Tools 101" class="cert-thumb-img">
-        </div>
-        <div class="cert-body">
-          <h3 class="cert-title">AI Tools 101: How to use google gemini like a pro </h3>
-          <p class="cert-sub">Webinar · UpskilTechPh</p>
-          <p class="cert-date">August 2026</p>
-        </div>
-        <span class="cert-view-btn">View Certificate ↗</span>
-      </button>
-
-      <button class="cert-card glass reveal" data-reveal type="button">
-        <div class="cert-media">
-          <img src="seminar3.png" alt="Certificate: Emerging IT Innovations" class="cert-thumb-img">
-        </div>
-        <div class="cert-body">
-          <h3 class="cert-title">Emerging IT Innovations </h3>
-          <p class="cert-sub">Webinar · UpskilTechPh</p>
-          <p class="cert-date">August 2026</p>
-        </div>
-        <span class="cert-view-btn">View Certificate ↗</span>
-      </button>
-
-    </div>
-  </div>
-</section>
-
-<!-- Certificate modal -->
-<div class="modal-overlay" id="certModal" aria-hidden="true">
-  <div class="modal cert-modal" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
-    <div class="modal-header">
-      <h3 id="certModalTitle">Certificate</h3>
-      <button class="modal-close" id="certModalClose" aria-label="Close certificate viewer">✕</button>
-    </div>
-    <div class="cert-viewer" id="certViewer">
-      <img src="" alt="" id="certModalImg" class="cert-modal-img">
-    </div>
-    <div class="cert-zoom-controls">
-      <button id="zoomOut" aria-label="Zoom out">−</button>
-      <span id="zoomLevel">100%</span>
-      <button id="zoomIn" aria-label="Zoom in">+</button>
-      <button id="zoomReset" class="zoom-reset">Reset</button>
-    </div>
-  </div>
-</div>
-
-<!-- RESUME -->
-<section id="resume" class="section resume">
-  <div class="container">
-    <div class="resume-card glass reveal" data-reveal>
-      <div class="resume-text">
-        <p class="eyebrow">Resume</p>
-        <h2 class="section-title">Web Developer &amp; UI/UX Designer</h2>
-        <p class="section-sub" style="margin:0 0 0;">
-          A summary of my education, projects, and skills across front-end development,
-          basic back-end development, and interface design, ready to share with recruiters
-          and OJT coordinators.
-        </p>
+          <div class="form-field">
+            <input type="email" id="cf-email" name="email" placeholder=" " required>
+            <label for="cf-email">Email</label>
+          </div>
+          <div class="form-field">
+            <textarea id="cf-message" name="message" placeholder=" " rows="4" required></textarea>
+            <label for="cf-message">Message</label>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit" id="formSubmit">
+            <span class="submit-label">Send Message</span>
+            <span class="submit-check">Sent ✓</span>
+          </button>
+        </form>
       </div>
-      <div class="resume-actions">
-        <button class="btn btn-primary" id="viewResumeBtn" type="button">View Resume</button>
-        <a href="resume.pdf" class="btn btn-ghost" id="downloadResumeBtn" download>Download Resume</a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">FC<span>.</span></a>
+        <p>Building functional, user-friendly websites and interfaces — one project at a time.</p>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/francheskaclairelopez/" target="_blank" rel="noopener"
+          aria-label="LinkedIn">in</a>
+        <a href="https://github.com/Freayyyy" target="_blank" rel="noopener" aria-label="GitHub">⌥</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lopezfrancheskaclaire@gmail.com" aria-label="Email">✉</a>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Resume modal -->
-<div class="modal-overlay" id="resumeModal" aria-hidden="true">
-  <div class="modal resume-modal" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
-    <div class="modal-header">
-      <h3 id="resumeModalTitle">Resume</h3>
-      <button class="modal-close" id="resumeModalClose" aria-label="Close resume viewer">✕</button>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Francheska. All rights reserved.</p>
     </div>
-    <div class="resume-viewer">
-      <iframe id="resumeFrame" src="" title="Resume preview"></iframe>
-    </div>
-  </div>
-</div>
+  </footer>
 
-<!-- CONTACT -->
-<section id="contact" class="section contact">
-  <div class="container contact-grid">
-    <div class="contact-left">
-      <p class="eyebrow reveal" data-reveal>Contact</p>
-      <h2 class="section-title reveal" data-reveal>Let's build something together</h2>
-      <p class="section-sub reveal" data-reveal style="margin:0 0 32px;">
-        Open to OJT placements, internships, and collaborative student projects.
-      </p>
-
-      <ul class="contact-list reveal" data-reveal>
-        <li>
-          <span class="contact-icon">✉</span>
-          <div><span class="contact-label">Email</span><a href="https://mail.google.com/mail/?view=cm&fs=1&to=lopezfrancheskaclaire@gmail.com">lopezfrancheskaclaire@gmail.com</a></div>
-        </li>
-        <li>
-          <span class="contact-icon">in</span>
-          <div><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/francheskaclairelopez/" target="_blank" rel="noopener">https://www.linkedin.com/in/francheskaclairelopez/</a></div>
-        </li>
-        <li>
-          <span class="contact-icon">⌥</span>
-          <div><span class="contact-label">GitHub</span><a href="https://github.com/Freayyyy" target="_blank" rel="noopener">https://github.com/Freayyyy</a></div>
-        </li>
-      </ul>
-    </div>
-
-    <form class="contact-form glass reveal" data-reveal id="contactForm" novalidate>
-      <div class="form-field">
-        <input type="text" id="cf-name" name="name" placeholder=" " required>
-        <label for="cf-name">Name</label>
-      </div>
-      <div class="form-field">
-        <input type="email" id="cf-email" name="email" placeholder=" " required>
-        <label for="cf-email">Email</label>
-      </div>
-      <div class="form-field">
-        <textarea id="cf-message" name="message" placeholder=" " rows="4" required></textarea>
-        <label for="cf-message">Message</label>
-      </div>
-      <button type="submit" class="btn btn-primary form-submit" id="formSubmit">
-        <span class="submit-label">Send Message</span>
-        <span class="submit-check">Sent ✓</span>
-      </button>
-    </form>
-  </div>
-</section>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <a href="#home" class="nav-logo">FC<span>.</span></a>
-      <p>Building functional, user-friendly websites and interfaces — one project at a time.</p>
-    </div>
-
-    <div class="footer-social">
-      <a href="https://www.linkedin.com/in/francheskaclairelopez/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-      <a href="https://github.com/Freayyyy" target="_blank" rel="noopener" aria-label="GitHub">⌥</a>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lopezfrancheskaclaire@gmail.com" aria-label="Email">✉</a>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <p>© <span id="year"></span> Francheska. All rights reserved.</p>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>

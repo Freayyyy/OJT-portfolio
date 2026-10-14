@@ -112,12 +112,16 @@
       filterBtns.forEach(function(b){ b.classList.remove('active'); });
       btn.classList.add('active');
       var filter = btn.getAttribute('data-filter');
+      var visible = [];
       projectCards.forEach(function(card){
-        var cat = card.getAttribute('data-cat');
-        var show = filter === 'all' || filter === cat;
+        var cat = card.getAttribute('data-cat') || '';
+        var cats = cat.split(/\s+/);
+        var show = filter === 'all' || cats.indexOf(filter) !== -1;
+        card.classList.remove('single-last');
         card.style.transition = 'opacity .3s ease, transform .3s ease';
         if (show){
           card.classList.remove('hidden');
+          visible.push(card);
           requestAnimationFrame(function(){
             card.style.opacity = '1';
             card.style.transform = 'scale(1)';
@@ -128,6 +132,9 @@
           setTimeout(function(){ card.classList.add('hidden'); }, 300);
         }
       });
+      if (visible.length % 3 === 1){
+        visible[visible.length - 1].classList.add('single-last');
+      }
     });
   });
 
